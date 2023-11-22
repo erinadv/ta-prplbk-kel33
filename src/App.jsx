@@ -43,6 +43,7 @@ const App = () => {
         <Route path="/characters" element={loggedIn ? <HomePage /> : <Navigate to="/" />} />
         <Route path="/characters/:id" element={loggedIn ? <DetailCharacter /> : <Navigate to="/" />} />
         <Route path="/profile" element={loggedIn ? <ProfilePage /> : <Navigate to="/" />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
     </Router>
